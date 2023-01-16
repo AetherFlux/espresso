@@ -1,0 +1,14 @@
+/* navbar */
+
+.navbar-bg {
+    background-color: rgba(162, 146, 121, 0.5);
+}
+
+.logo-nav {
+    height: 30px;
+    filter: #46332A;
+}
+
+.collapsing{
+    transition: 0.5s ease-in-out!important;
+}
