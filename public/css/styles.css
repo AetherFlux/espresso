@@ -7,8 +7,38 @@ h1 {
     line-height: 150%;
 }
 
+.title-alt {
+    color: #A29279;
+}
+
+h2 {
+    font-family: 'Ibarra Real Nova';
+    font-style: italic;
+    font-weight: 700;
+    line-height: 150%;
+    font-size: 48px;
+    letter-spacing: -0.023em;
+    text-transform: capitalize;
+    color: #8D3623;
+}
+
+p {
+    font-family: 'Goudy Bookletter 1911';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.023em;
+    text-transform: capitalize;
+    color: #FAEEE7;
+}
+
 @media screen and (min-width: 768px) {
     h1 {
+        font-size: 64px;
+    }
+
+    h2 {
         font-size: 64px;
     }
 }
@@ -92,21 +122,20 @@ h1 {
 
 /* info section */
 
-#hook-section {
+#info-section {
     overflow-x: hidden;
 }
 
-.hook-background {
+.info-background {
     background: url("../assets/images/bg-droplets-1.png"), #FAF0E9;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
     width: 100%;
     background-blend-mode: screen;
 }
 
-.hook-container-inner {
+.info-hook-container {
     padding-top: 12rem;
     position: relative;
 }
@@ -125,14 +154,278 @@ h1 {
 }
 
 
-.hook-box{
+.info-hook-box{
     border: 5px solid #8D3623;
     border-radius: 36px;
     padding: 1rem 2rem;
     margin: 0 2rem;
 }
 
-.hook {
+.info-hook {
     text-align: center;
     color: #8D3623;
 }
+
+.info-content-container-outer {
+    padding-top: 12rem;
+    overflow-x: hidden;
+}
+
+.info-content-container-inner {
+    background: #46332A;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 100px;
+    overflow-y: visible;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .info-content-container-inner {
+        border-radius: 171px;;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: visible;
+}
+
+.swiper-slide {
+    text-align: center;
+    position: relative;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #BAAE94;
+}
+
+.slide-img-hover {
+    transform: translateY(-150px);
+    animation: slide-hover 0.5s ease-in-out;
+}
+
+.slide-img-inactive {
+    transform: translateY(0px);
+    animation: slide-inactive 0.5s ease-in-out;
+}
+
+@keyframes slide-hover {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes slide-inactive {
+    0% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.slider-info-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 50%;
+}
+
+.slider-info-box-inner {
+    background: linear-gradient(358.2deg, #FBF4EE -6.95%, rgba(255, 255, 255, 0) 204.43%);
+    backdrop-filter: blur(9px);
+    border-radius: 36px;
+    padding: .5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-info-box-active {
+    animation: grow-out 0.5s ease-in-out;
+}
+
+.slider-info-box-inactive {
+    opacity: 0;
+    animation: shrink-in 0.5s ease-in-out;
+}
+
+@keyframes grow-out {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shrink-in {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.slider-info-box-title {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: -0.023em;
+    color: #46332A;
+}
+
+.slider-info-box-text {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.023em;
+    color: #7E705B;
+}
+
+.btn-primary {
+    font-family: 'Goudy Bookletter 1911';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    border-radius: 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #985440;
+    border-color: #985440;
+}
+
+.btn-primary:hover {
+    background-color: #8D3623;
+    border-color: #8D3623;
+}
+
+.btn-primary:active {
+    background-color: #985440!important;
+    border-color: #985440!important;
+}
+
+.brand-slogan {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.brand-slogan-text {
+    margin-bottom: 15px;
+}
+
+.brand-logo {
+    height:148px;
+    padding: 0 20px;
+}
+
+.info-cards-container {
+    margin: 0 3rem;
+}
+
+.info-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 313/433;
+    border-radius: 37px;
+}
+
+.info-card-1 {
+    background-image: url("../assets/images/coffee-circle.jpg");
+}
+
+.info-card-2 {
+    background-image: url("../assets/images/espresso-making.jpg");
+}
+
+.info-card-3 {
+    background-image: url("../assets/images/bar-image.jpg");
+}
+
+.info-card-mask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background:  rgba(0, 0, 0, 0.8);
+    border-radius: 37px;
+}
+
+.info-card-mask-inactive {
+    opacity: 0;
+    animation: hide-mask 0.5s ease-in;
+}
+
+.info-card-mask-active {
+    opacity: 1;
+    animation: reveal-mask 0.5s ease-in;
+}
+
+@keyframes reveal-mask {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-mask {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.info-card-text {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: -0.023em;
+    text-transform: capitalize;
+    color: #FAEEE7;
+}
+
+.info-end {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    margin: 0 15%;
+    text-align: left;
+}
+
+.info-end-buttons {
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: end;
+}
+
+/* testimonials section */
